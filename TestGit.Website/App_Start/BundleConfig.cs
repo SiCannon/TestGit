@@ -16,6 +16,11 @@ namespace TestGit.Website.App_Start
             bootstrapbundle.Transforms.Add(new LessTransform("~/Styles/bootstrap"));
             bootstrapbundle.Transforms.Add(new CssMinify());
             bundles.Add(bootstrapbundle);
+
+            var fontAwesomeBundle = new Bundle("~/bundles/font-awesome").Include("~/Styles/font-awesome/font-awesome.less");
+            fontAwesomeBundle.Transforms.Add(new LessTransform("~/Styles/font-awesome"));
+            fontAwesomeBundle.Transforms.Add(new CssMinify());
+            bundles.Add(fontAwesomeBundle);
         }
     }
 }
