@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\fonts\fontawesome-webfont.svg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -247,6 +248,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\vars.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\font-awesome\animated.less" />
+    <Content Include="Styles\font-awesome\bordered-pulled.less" />
+    <Content Include="Styles\font-awesome\core.less" />
+    <Content Include="Styles\font-awesome\fixed-width.less" />
+    <Content Include="Styles\font-awesome\font-awesome.less" />
+    <Content Include="Styles\font-awesome\icons.less" />
+    <Content Include="Styles\font-awesome\larger.less" />
+    <Content Include="Styles\font-awesome\list.less" />
+    <Content Include="Styles\font-awesome\mixins.less" />
+    <Content Include="Styles\font-awesome\path.less" />
+    <Content Include="Styles\font-awesome\rotated-flipped.less" />
+    <Content Include="Styles\font-awesome\stacked.less" />
+    <Content Include="Styles\font-awesome\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\fonts\FontAwesome.otf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
