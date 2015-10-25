@@ -155,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Styles\test2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -271,15 +270,6 @@
     <Content Include="Styles\fonts\fontawesome-webfont.woff" />
     <Content Include="Styles\fonts\fontawesome-webfont.woff2" />
     <Content Include="Styles\fonts\FontAwesome.otf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\test\xvariables.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\test\xfont-awesome.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Styles\test\xcore.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
