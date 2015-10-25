@@ -51,9 +51,14 @@ namespace TestGit.Tests
         [TestMethod]
         public void Can_Parse_Divisor_Font()
         {
-            string less = "@x: 10px; div { fontd: @x / 2 serif; }";
+            string less = "@x: 10px; div { font: @x/2 serif; }";
             string css = Less.Parse(less, getConfig());
             Assert.IsFalse(string.IsNullOrEmpty(css));
+            string expected = @"div {
+  font: 10px/2 serif;
+}
+".Replace("\r", "");
+            Assert.AreEqual(expected, css);
             Debug.WriteLine(css);
         }
 
@@ -67,6 +72,12 @@ namespace TestGit.Tests
 
         class Logger: ILogger
         {
+            private void LogMessage(string message)
+            {
+                System.Diagnostics.Debug.WriteLine(message);
+                Console.WriteLine(message);
+            }
+
             public void Debug(string message, params object[] args)
             {
                 throw new NotImplementedException();
@@ -74,7 +85,7 @@ namespace TestGit.Tests
 
             public void Debug(string message)
             {
-                System.Diagnostics.Debug.WriteLine(message);
+                LogMessage(message);
             }
 
             public void Error(string message, params object[] args)
@@ -84,7 +95,7 @@ namespace TestGit.Tests
 
             public void Error(string message)
             {
-                System.Diagnostics.Debug.WriteLine(message);
+                LogMessage(message);
             }
 
             public void Info(string message, params object[] args)
