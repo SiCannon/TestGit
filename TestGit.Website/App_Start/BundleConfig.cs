@@ -21,6 +21,13 @@ namespace TestGit.Website.App_Start
             fontAwesomeBundle.Transforms.Add(new LessTransform("~/Styles/font-awesome"));
             fontAwesomeBundle.Transforms.Add(new CssMinify());
             bundles.Add(fontAwesomeBundle);
+
+            //var xfontAwesomeBundle = new Bundle("~/bundles/xfont-awesome").Include("~/Styles/test/xfont-awesome.less");
+            var xfontAwesomeBundle = new Bundle("~/bundles/xfont-awesome").Include("~/Styles/test/xcore.less");
+            xfontAwesomeBundle.Transforms.Add(new LessTransform("~/Styles/test"));
+            xfontAwesomeBundle.Transforms.Add(new CssMinify());
+            bundles.Add(xfontAwesomeBundle);
+
         }
     }
 }
